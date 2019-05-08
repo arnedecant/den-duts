@@ -1,5 +1,5 @@
 # Den Duts
 
-## todo
+## Todo
 - Remove duplicates in case someone belongs to multiple teams
-- Move code to app.js
+- Move code to separate files (app.js, style.css, config.json)
