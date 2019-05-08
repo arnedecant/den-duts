@@ -1,0 +1,13 @@
+{
+	"teams": {
+		"web": ["Floris", "Meindert", "Arne"],
+		"ui": ["Lucinda", "Niels"],
+		"vr": ["Bram", "Arthy", "Kevin", "Mathias DC", "Maarten"],
+		"art": ["Maxime", "Claude", "Mathias L"],
+		"pm": ["Stefanie", "Timothy"]
+	},
+	"images": ["Stefanie", "Timothy"],
+	"alts": {
+		"Maxime": ["Maksiem", "Maxiem", "Maxim", "Maskiem", "Ge weet toch da gij het zijt eh, Maksiem?", "Obumax", "Maksxkiem"]
+	}
+}
