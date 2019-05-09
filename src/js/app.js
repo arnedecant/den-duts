@@ -52,10 +52,18 @@ class App {
 			})
 		}
 
+		// Remove duplicates
+
+		this.team = [...new Set(this.team)]
+
 	}
 
 
 	click(e) {
+
+		// If there's no team, skip
+
+		if (!this.team || this.team.length <= 0) return
 
 		// We only have one button for now
 		// Skip if it ain't this button
@@ -64,7 +72,8 @@ class App {
 
 		// Lookups
 
-		const duts = this.team[Math.floor(Math.random() * this.team.length)]
+		const random = Math.floor(Math.random() * this.team.length)
+		const duts = this.team[random]
 		const img = this.images.find(img => img == duts)
 
 		// DOM manipulation
