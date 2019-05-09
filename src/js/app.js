@@ -1,20 +1,22 @@
-'use strict'
+// -------------------------------------------------------------------
+// :: APP
+// -------------------------------------------------------------------
 
-import * as config from '../assets/config.json'
+import * as data from '../assets/data.json'
 
-export default class App {
+class App {
 
 	constructor() {
 
-		// Save config as global variable
+		// Save data as global variable
 
-		window.CONFIG = config.default
+		window.DATA = data.default
 
 		// Class properties
 
-		this.team = CONFIG.team
-		this.images = CONFIG.images
-		this.alts = CONFIG.alts
+		this.teams = DATA.teams
+		this.images = DATA.images
+		this.alts = DATA.alts
 
 		this.team = []
 
@@ -24,7 +26,7 @@ export default class App {
 
 		// Event listeners
 
-		document.body.addEventListener('click', click.bind(this))
+		document.body.addEventListener('click', this.click.bind(this))
 
 		// Init
 
@@ -35,10 +37,12 @@ export default class App {
 
 	init() {
 
+		// Get team name from URL
+
 		const url = new URL(window.location.href)
 		const key = url.searchParams.get('team')
 
-		// Get team or combine teams
+		// Get team array or combine teams
 
 		if (this.teams[key]) {
 			this.team = this.teams[key]
@@ -68,8 +72,10 @@ export default class App {
 		this.$h1.innerHTML = duts
 		document.body.classList.add('duts')
 
-		if (img) document.body.style.backgroundImage = `url(${img.toLowerCase()}.png)`
+		if (img) document.body.style.backgroundImage = `url(assets/images/${img.toLowerCase()}.png)`
 
 	}
 
 }
+
+export default new App()

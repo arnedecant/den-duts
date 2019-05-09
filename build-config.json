@@ -1,0 +1,13 @@
+{
+	"production": false,
+	"targets": [
+		{
+			"id": "index",
+			"seo-title": "Den Duts",
+			"seo-description": "Wie is deze keer den duts?",
+			"src-html": "index.html",
+			"src-sass": "main.scss",
+			"src-js": "app.js"
+		}
+	]
+}

@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+// Variables
+
+// @import "_variables";
+
+// Base
+
+// @import "base/_normalize";
+// @import "base/_typography";
+// @import "base/_animations";
+// @import "base/_images";
+// @import "base/_layout";
+// @import "base/_lists";
+
+// Components
+
+// @import "components/_buttons";
+// @import "components/_navigation";
+// @import "components/_header";
+// @import "components/_main";
+// @import "components/_section";
+// @import "components/_footer";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	height: 100vh;
+	width: 100%;
+	text-align: center;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	opacity: 0;
+	transition: all .24s ease;
+}
+
+h1 {
+	font-family: "Comic Sans MS", sans-serif;
+	display: none;
+	margin: 10rem auto;
+	font-size: 8rem;
+	transition: opacity .24s ease;
+	text-transform: uppercase;
+
+	text-align: center;
+	background: linear-gradient(to right, #e74c3c, #e67e22 , #f1c40f, #2ecc71, #1abc9c, #3498db, #9b59b6);
+	background-size: 200% auto;
+	color: #000;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: shine 1s linear infinite;
+	animation: shine 1s linear infinite;
+}
+
+@-webkit-keyframes shine {
+	to {
+		background-position: 200% center;
+	}
+}
+@keyframes shine {
+	to {
+		background-position: 200% center;
+	}
+}
+
+button {
+	font-size: 1rem;
+	margin: 2rem;
+	border: 0;
+	padding: 1rem;
+	background-color: #2980b9;
+	color: #fff;
+	cursor: pointer;
+	transition: all .24s ease;
+}
+
+button:hover {
+	background-color: #3498db;
+}
+
+body.duts h1 {
+	display: block;
+}
+
+body.duts button {
+	display: none;
+}
+
+body.duts canvas {
+	opacity: 1;
+	z-index: 999;
+}

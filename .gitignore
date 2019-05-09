@@ -1,1 +1,5 @@
-/assets/images
+.DS_Store
+node_modules
+public
+package-lock.json
+src/assets/images
